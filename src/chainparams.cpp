@@ -104,10 +104,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1510704000; // November 15th, 2017.
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000000000058a9");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); //506067
+        consensus.defaultAssumeValid = uint256S("0x0000007e2fcf56c5a83a34e21e1877ae1b1ee1565d002acb749943e98c14f817"); //506067
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -160,6 +160,7 @@ public:
         // release ASAP to avoid it where possible.
         vSeeds.clear();
         vSeeds.emplace_back("seed.blocknew.org");
+        vSeeds.emplace_back("seed.blocknew.net");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,34);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,72);
@@ -178,6 +179,7 @@ public:
         checkpointData = {
             {
                 { 0, uint256S("000dcfe5ea048a298df5e4b9ee638a8fbde57e8db17670611310d5a243b29c0b")},
+                { 22697, uint256S("0000007e2fcf56c5a83a34e21e1877ae1b1ee1565d002acb749943e98c14f817")},
             }
         };
 
