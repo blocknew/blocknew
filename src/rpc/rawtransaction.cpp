@@ -430,6 +430,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             }
 
             CScript scriptPubKey = GetScriptForDestination(destination);
+
             CAmount nAmount = AmountFromValue(sendTo[name_]);
 
             CTxOut out(nAmount, scriptPubKey);
